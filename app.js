@@ -5,6 +5,7 @@ let lockBoard = false
 let firstCard,secondCard;
 
 function flipcard(){
+    console.log(this);
     if (lockBoard) return;
     if (this === firstCard)return;
 
@@ -51,7 +52,7 @@ function restBoard(){
    cards.forEach(card => {
        let randomPos = Math.floor(Math.random()*12)
        card.style.order = randomPos
-   }); 
+}); 
 })();
 
 cards.forEach(card=> card.addEventListener('click', flipcard));

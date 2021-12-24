@@ -5,8 +5,7 @@
 }
 body{
     height: 100vh; 
-    background-color: blue;
-}
+    background-color: gray;}
 .memory-game{
     width: 640px;
     height: 640px;
