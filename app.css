@@ -1,24 +1,32 @@
+@import url('https:fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     height: 100vh; 
-    background-color: gray;}
+    background-color: gray;
+}
+.flexDiv{
+    display: flex;
+}
+.flexCenter{
+    justify-content: center;
+}
+.marginTop{
+    margin-top: 10px;
+}
 .memory-game{
-    width: 640px;
-    height: 640px;
+    width: 440px;
+    height: 440px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
 }
 .memory-card{
-    width: calc(25% - 10px);
-    height:calc(33.333% - 10px) ;
-    margin: 5px;
-    position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
@@ -37,9 +45,70 @@ transform: rotateY(180deg);
     padding: 20px;
     border-radius: 5px;
     position: absolute;
-    background: #1c7ccc;
     backface-visibility: hidden;
 }
 .front-face{
     transform:rotateY(180deg);
+}
+.retry{
+    width:80px;
+    height: 40px;
+    margin-right:84px;
+    font-size: 1.05em;
+    background: transparent;
+    border: none;
+    color:black;
+    position:absolute; 
+    right:5px; 
+    bottom:220px;
+    margin: 0 100px;
+    cursor: pointer;  
+    transform: scale(1);
+}
+.retry:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+.retry::before,
+.retry::after{
+    content: ''; position: absolute;
+    bottom: 0; right: 0;
+    z-index: -1; transition: all 0.4s;
+}
+.retry::before{
+    bottom: 0; right: 0;
+    width: 100%; height: 100%;
+    background: #f73333;
+    box-shadow: 0 10px 30px rgba(228,88,88,0.568);
+}
+.retry::after{
+    bottom: -10px; right: -10px;
+    width: 40px; height: 40px;
+    background: #ffffff15;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+    border-radius: 50px;
+}
+.retry:hover::before{
+    bottom: -7px; right: -5%;
+    width: 100%; height: 100%;
+}
+.retry:hover::after{
+    border-radius: 0; bottom: 0; right: 0;
+    width: 100%; height: 100%;
+}
+.streak{
+    width:80px;
+    height: 40px;
+    margin-right:500px;
+    font-size: 1.05em;
+    background: transparent;
+    border: none;
+    color: black; 
+    position: absolute;
+    right:1100px; 
+    bottom:220px;
+    width: 7%;
+    margin: 0 100px;
+    box-shadow: 0 10px 30px rgba(228,88,88,0.568);
+    background: #f73333;  
 }
