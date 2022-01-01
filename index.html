@@ -1,105 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="./css/app.css">
+
     <title>Memory Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+
 <body class="bg-black">
+
     <h1 class="flex justify-center bg-black">
         <p class="text-red-600">Memory Game</p>
-      </h1>
-    <div class="grid grid-cols-1">
+    </h1>
+    <div class="grid grid-cols-">
         <div class="flex justify-around">
-            <div class="text-red-900">Timer: <span id="timer">0:00</span></div>
+            <div class="text-red-900 h-28">Timer: <span id="timer">0:00</span></div>
             <div class="text-red-900">Tries: <span id="badTries">0</span></div>
             <div class="text-red-900">Player: <span id="player">0</span></div>
         </div>
         <div class="streak">Streak: <span id="streak">0</span></div>
-        <span><button class='retry'>Retry</button></span>
-        
+        <span><button class='retry rounded-full'>Retry</button></span>
         <div class="flex justify-center">
-            <section class="flex justify-around flex-wrap w-7/12 border border-2 border-red-900" >
+            <section class="flex justify-around flex-wrap w-6/12 border border-2 border-red-900">
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="aurelia">
-                    <img  class= "front-face" src="my imges/aurelia.svg" 
-                    alt=" aurelia">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/aurelia.svg" alt=" aurelia">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="aurelia">
-                    <img  class= "front-face" src="my imges/aurelia.svg" 
-                    alt=" aurelia">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/aurelia.svg" alt=" aurelia">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="vue">
-                    <img  class= "front-face" src="my imges/vue.svg" 
-                    alt=" vue">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/vue.svg" alt=" vue">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="vue">
-                    <img  class= "front-face" src="my imges/vue.svg" 
-                    alt=" aurelia">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/vue.svg" alt=" aurelia">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="angular">
-                    <img  class= "front-face" src="my imges/angular.svg" 
-                    alt=" angular">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/angular.svg" alt=" angular">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="angular">
-                    <img  class= "front-face" src="my imges/angular.svg" 
-                    alt=" angular">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/angular.svg" alt=" angular">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="ember">
-                    <img  class= "front-face" src="my imges/ember.svg" 
-                    alt=" ember">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/ember.svg" alt=" ember">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="ember">
-                    <img  class= "front-face" src="my imges/ember.svg" 
-                    alt=" ember">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/ember.svg" alt=" ember">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="backbone">
-                    <img  class= "front-face" src="my imges/backbone.svg" 
-                    alt=" backbone">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/backbone.svg" alt=" backbone">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="backbone">
-                    <img  class= "front-face" src="my imges/backbone.svg" 
-                    alt=" backbone">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/backbone.svg" alt=" backbone">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="react">
-                    <img  class= "front-face" src="my imges/react.svg" 
-                    alt=" react">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/react.svg" alt=" react">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
                 <div class="memory-card w-36 h-36 m-0.5" data-framework="react">
-                    <img  class= "front-face" src="my imges/react.svg" 
-                    alt=" react">
-                    <img  class= "back-face grayscale transform brightness-75" src="my imges/js-badge.svg" 
-                    alt=" js-badge">
+                    <img class="front-face" src="my imges/react.svg" alt=" react">
+                    <img class="back-face grayscale transform brightness-75" src="my imges/js-badge.svg"
+                        alt=" js-badge">
                 </div>
             </section>
         </div>
     </div>
-    
+
     <script src="app.js"></script>
 </body>
+
 </html>
